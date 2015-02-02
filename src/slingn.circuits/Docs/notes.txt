@@ -1,9 +1,0 @@
-﻿-Refactor to support more extensive rules (i.e. Only fail if Break Limit is met by Recent Failures)
-
--Refactor to support storing Circuits externally, outside of memory (DB, etc)
-
--Refactor to support allowing consumers to Log different activity (Circuit Failed, Broken, Connected, etc)
--Refactor to support allowing consumers to Subscribe to different activity (Circuit Broken, Circuit Connected, etc)
-
--Refactor to allow extensibility for Circuit Check (for example, Connect if external api is reachable)
--Refactor to allow extensibility for Circuit Failure capture (for example, capture the Failure in an external DB)
