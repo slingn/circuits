@@ -1,0 +1,43 @@
+﻿<div class="content">
+    <h1>Welcome to the DEMO</h1>
+    
+    <span>
+        <label for="throwException">Throw an exception</label>    
+        <input type="checkbox" name="throwException" data-bind="checked: ThrowException" />
+    </span>
+    
+    <button data-bind="click: Load">CLICK TO GET DATA FROM WEB SERVICE</button>
+    
+    
+    <ul data-bind="foreach: Items">
+        <li data-bind="text: $data"></li>
+    </ul>
+        
+</div>
+
+@section scripts
+{
+    <script language="javascript" type="text/javascript">
+        var ViewModel = {
+
+            ThrowException: ko.observable(false),
+
+            Load: function () {
+
+                $.getJSON('@Url.Action("Get", "ExampleApi", new { httproute = ""})', {
+                    throwException: ViewModel.ThrowException()
+                }, function (response) {
+                    if (response.Data.length > 0)
+                        ViewModel.Items(response.Data);
+                });
+
+            },
+
+            Items: ko.observableArray([]),
+
+
+        };
+
+        ko.applyBindings(ViewModel);
+    </script>
+}
