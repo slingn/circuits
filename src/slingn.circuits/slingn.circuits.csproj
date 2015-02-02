@@ -41,7 +41,6 @@
   <ItemGroup>
     <Compile Include="Circuit.cs" />
     <Compile Include="CircuitBreaker.cs" />
-    <Content Include="Docs\notes.txt" />
     <Compile Include="Exceptions\CircuitExecutionException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
