@@ -1,5 +1,0 @@
-E:\dev\slingn.libraries\src\slingn.circuits\bin\Debug\slingn.circuits.dll
-E:\dev\slingn.libraries\src\slingn.circuits\bin\Debug\slingn.circuits.pdb
-E:\dev\slingn.libraries\src\slingn.circuits\obj\Debug\slingn.circuits.csprojResolveAssemblyReference.cache
-E:\dev\slingn.libraries\src\slingn.circuits\obj\Debug\slingn.circuits.dll
-E:\dev\slingn.libraries\src\slingn.circuits\obj\Debug\slingn.circuits.pdb
