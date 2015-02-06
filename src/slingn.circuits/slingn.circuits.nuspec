@@ -12,7 +12,4 @@
     <projectUrl>https://github.com/slingn/circuits</projectUrl>
     <licenseUrl>https://github.com/slingn/circuits</licenseUrl>
   </metadata>
-  <files>
-    <file src="src\slingn.circuits\bin\Debug\*.dll" target="lib" />
-  </files>
 </package>
