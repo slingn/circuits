@@ -9,6 +9,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slingn.circuits.specs", "sp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slingn.circuits.demo", "app\slingn.circuits.demo\slingn.circuits.demo.csproj", "{D2181405-8EA0-4896-8837-455389C02D65}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B7EE2E7-67D3-4D8E-A318-6BBCCF0AF0BC}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slingn.circuits.loadtests", "tests\slingn.circuits.loadtests\slingn.circuits.loadtests.csproj", "{075065FE-814A-4D51-9143-AD873C7A7C47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6FEE1315-1467-4776-9BFB-805B6E9693AE}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +40,10 @@ Global
 		{D2181405-8EA0-4896-8837-455389C02D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2181405-8EA0-4896-8837-455389C02D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2181405-8EA0-4896-8837-455389C02D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{075065FE-814A-4D51-9143-AD873C7A7C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075065FE-814A-4D51-9143-AD873C7A7C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075065FE-814A-4D51-9143-AD873C7A7C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075065FE-814A-4D51-9143-AD873C7A7C47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

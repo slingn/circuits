@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 
 namespace slingn.circuits.Exceptions
 {
+    [Serializable]
     public class CircuitExecutionException : Exception
     {
         public CircuitExecutionException()

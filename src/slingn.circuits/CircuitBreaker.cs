@@ -6,10 +6,14 @@ namespace slingn.circuits
     public class CircuitBreaker
     {
 
-        private static readonly Dictionary<string, Circuit> Circuits = new Dictionary<string, Circuit>();
-        private static readonly object Locker = new object();
+        public static readonly TimeSpan DefaultBreakDuration = TimeSpan.FromSeconds(30);
+        public static readonly int DefaultBreakLimit = 1;
 
         
+        private static readonly Dictionary<string, Circuit> Circuits = new Dictionary<string, Circuit>();
+        private static readonly object Locker = new object();
+        
+
         public static Circuit Execute(string name, Action action, int breakLimit, TimeSpan breakDuration, bool throwOnError)
         {
 
@@ -51,7 +55,7 @@ namespace slingn.circuits
 
         public static Circuit Execute(string name, Action action, int breakLimit)
         {
-            return Execute(name, action, breakLimit, TimeSpan.FromSeconds(30), false);
+            return Execute(name, action, breakLimit, DefaultBreakDuration, false);
 
         }
 
@@ -86,5 +90,15 @@ namespace slingn.circuits
         }
 
 
+        public static void Add(string name, int breaklimit)
+        {
+            if (Get(name) == null)
+                Create(name, breaklimit, DefaultBreakDuration);
+        }
+
+        public static Circuit Execute(string circuitName, Action action)
+        {
+            return Execute(circuitName, action, DefaultBreakLimit, DefaultBreakDuration);
+        }
     }
 }

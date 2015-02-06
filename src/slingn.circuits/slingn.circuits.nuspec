@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  For more info on this file format visit http://docs.nuget.org/docs/reference/nuspec-reference.
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">  
+  <metadata>
+    <id>slingn.circuits</id>
+    <version>1.0.0</version>
+    <authors>Kasi Prasad</authors>
+    <description>A simple implementation of the Circuit Breaker pattern</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/slingn/circuits</projectUrl>
+    <licenseUrl>https://github.com/slingn/circuits</licenseUrl>
+  </metadata>
+</package>

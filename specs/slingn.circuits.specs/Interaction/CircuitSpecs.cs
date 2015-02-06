@@ -34,7 +34,7 @@ namespace slingn.circuits.specs.Interaction.CircuitSpecs
     }
 
     [Subject(typeof(Circuit))]
-    public class When_a_circuit_executed_and_an_exception_occurs : WithFakes
+    public class When_a_circuit_is_executed_and_an_exception_occurs : WithFakes
     {
         private static Action _sourceMethod;
 

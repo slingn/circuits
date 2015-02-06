@@ -31,6 +31,8 @@ namespace slingn.circuits
         /// </summary>
         private DateTime? _lastExceptionTimestamp;
 
+        private int _numberOfExecutionAttempts;
+
         /// <summary>
         /// Creates a Circuit instance
         /// </summary>
@@ -112,6 +114,7 @@ namespace slingn.circuits
         {
             try
             {
+                _numberOfExecutionAttempts++;
                 action();
             }
             catch (Exception ex)
@@ -121,6 +124,21 @@ namespace slingn.circuits
                 string message = string.Format("A Circuit Execution exception has occurred while executing the Circuit {0}.", _name);
                 throw new CircuitExecutionException(message, ex);
             }
+        }
+
+        public int NumberOfExecutionAttempts
+        {
+            get { return _numberOfExecutionAttempts; }
+        }
+
+        public TimeSpan BreakDuration
+        {
+            get { return _breakDuration; }
+        }
+
+        public int BreakLimit
+        {
+            get { return _breakLimit; }
         }
 
         private bool ShouldResetFailureCount()

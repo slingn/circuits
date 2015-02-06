@@ -20,7 +20,7 @@ namespace slingn.circuits.demo.Controllers
             const int breakLimit = 2;
             
             //when a Circuit Breaks (Off), i will not allow the Circuit to Execute (application logic) for 30 seconds
-            TimeSpan breakDuration = TimeSpan.FromSeconds(30);
+            TimeSpan breakDuration = TimeSpan.FromSeconds(10);
 
             //next: I define the application logic which I want to protect with a Circuit 
             
@@ -39,7 +39,6 @@ namespace slingn.circuits.demo.Controllers
                 //next: i pass the parameters i've defined into the Execute method of the Circuit breaker
                 //the Circuit Breaker will always return an instance of the Circuit you have implictly created/retrieved
                 var circuit = CircuitBreaker.Execute(circuitName, applicationLogic, breakLimit, breakDuration, true);
-
                 
                 //for illustrative purposes, if the circuit is broken, i am displaying a message to the screen
                 //indicating the Circuit's Break Expiration Date/Time
@@ -50,7 +49,7 @@ namespace slingn.circuits.demo.Controllers
                 if (circuit.IsBroken())
                 {
                     list.Add(
-                       string.Format("Circuit is broken and will not be retried until {0}", circuit.ExpirationDate.ToString())
+                       string.Format("Circuit is broken and will not be retried until {0:MM/dd/yyyy HH:mm:ss.fff}", circuit.ExpirationDate)
                     );
                 }
             }
