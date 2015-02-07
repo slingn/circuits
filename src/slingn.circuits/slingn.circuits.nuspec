@@ -13,6 +13,6 @@
     <licenseUrl>https://github.com/slingn/circuits</licenseUrl>
   </metadata>
   <files>
-    <file src="bin\Debug\*.dll" target="lib\net40" />
+    <file src="bin\Release\*.dll" target="lib\net40" />
   </files>
 </package>
