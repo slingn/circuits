@@ -36,7 +36,7 @@ namespace slingn.circuits.specs.Interaction.CircuitBreakerSpecs
 
         Because of = () => CircuitBreaker.Execute(_circuitName, _sourceMethod, _breaklimit);
 
-        It should_be_able_to_retrieve_the_circuit = () => _result = CircuitBreaker.Get(_circuitName);
+        It should_be_able_to_retrieve_the_circuit = () => CircuitBreaker.Get(_circuitName).ShouldNotBeNull();
 
         Cleanup after = () => CircuitBreaker.Reset();
 
