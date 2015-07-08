@@ -94,7 +94,7 @@ namespace slingn.circuits
         /// <summary>
         /// Checks whether the Circuit is Broken - Note: A Circuit can never be broken if its Break Limit is set to 0 or less
         /// </summary>
-        /// <returns>true if the Circuit is Broken (Off), false if it is Connected (On)</returns>
+        /// <returns>true if the Circuit is Disconnected (Off), false if it is Connected (On)</returns>
         public bool IsBroken()
         {
             var canBeBroken = _breakLimit > 0;
